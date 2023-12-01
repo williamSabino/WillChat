@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,700;1,400 & display=swap');
+
+:root{
+    --fonte-principal:'Roboto', sans-serif;
+
+    /*Cores primarias*/
+    --cor-grau1: #daf8e3;
+    --cor-grau2: #97ebdb;
+    --cor-grau3: #00c2c7;
+    --cor-grau4: #0086ad;
+    --cor-grau5: #005582;
+
+    /*Cores de fundo*/
+    --cor-imag-fundo1:#df4794;
+    --cor-imag-fundo2:#3c51b2;
+    --cor-imag-fundo3:#3cc3ed;
+    --cor-imag-fundo4:#481691;
+    --cor-imag-fundo5:#8530af;
+    --cor-imag-fundo6:#4392d4;
+    --cor-imag-fundo7:#30085b;
+    --cor-imag-fundo8:#605fde;
+
+}
+
+body{
+    background-image: url('./utilsFront/assets/people-call-in-the-smartphone-upscaled.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*header*/
+.cabecario{
+    opacity: 0.9;
+    height: 8vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-grau1);
+    font-weight: 700;
+    background-color: var(--cor-grau4);
+}
+
+.cabecario__logo{
+    padding-top: 1.2rem;
+}
+
+.conteudo{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*forms geral*/
+.container{
+    border-radius: 2rem;
+    text-align: center;
+    padding: 2rem;
+    border: solid black 1px;
+    width: 40vw;
+    height: 40vh;
+    background-color: var(--cor-grau4);
+    opacity: 0.9;
+
+}
+
+.container__titulo{
+    font-size: 2rem;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    color: var(--cor-grau1);
+}
+
+/*Formulario login*/
+.container__formulario-login,
+.container__formulario-cadastro{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.container__formulario-login input,
+.container__formulario-cadastro input{
+    border-radius: 15px;
+    border: none !important;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 30vw;
+    height: 40px;
+}
+
+.container__formulario-login input[type="button"],
+.container__formulario-cadastro input[type="button"]{
+    cursor: pointer;
+    width: 10vw;
+    height: 40px;
+    background-color: var(--cor-grau3);
+}
+
+
+
+.container__formulario-login input::placeholder,
+.container__formulario-cadastro input::placeholder{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--fonte-principal);
+    color: var(--cor-grau5);
+}
+
+.container__login-cadastro-texto{
+    color: var(--cor-grau1);
+    margin: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+/*Cadastro*/
+.cadastro{
+    display: none;
+}
+
+.container__botoes{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.container__formulario-cadastro input[value="Voltar"]{
+    background-color: var(--cor-grau5);
+    color: var(--cor-grau1);
+}

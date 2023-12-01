@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,700;1,400 & display=swap');
+
+:root {
+    --fonte-principal: 'Roboto', sans-serif;
+
+    /*Cores primarias*/
+    --cor-grau1: #daf8e3;
+    --cor-grau2: #97ebdb;
+    --cor-grau3: #00c2c7;
+    --cor-grau4: #0086ad;
+    --cor-grau5: #005582;
+
+    /*Cores de fundo*/
+    --cor-imag-fundo1: #df4794;
+    --cor-imag-fundo2: #3c51b2;
+    --cor-imag-fundo3: #3cc3ed;
+    --cor-imag-fundo4: #481691;
+    --cor-imag-fundo5: #8530af;
+    --cor-imag-fundo6: #4392d4;
+    --cor-imag-fundo7: #30085b;
+    --cor-imag-fundo8: #605fde;
+
+}
+
+/*Body*/
+
+body{
+    overflow: hidden;
+    background-image: url('../utilsFront/assets/people-call-in-the-smartphone-upscaled.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*header*/
+.cabecario {
+    opacity: 0.9;
+    height: 8vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--fonte-principal);
+    color: var(--cor-grau1);
+    font-weight: 700;
+    background-color: var(--cor-imag-fundo4);
+}
+
+.cabecario__titulo{
+    padding-top: 1.2rem;
+}
+
+/*container*/
+
+.container {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    width: 100vw;
+    height: 90vh;
+}
+
+/*container contatos*/
+.container__contatos {
+    opacity: 0.85;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex: 0.8;
+}
+
+.container__titulo{
+    color: var(--cor-grau1);
+    font-size: 1.3rem;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    width: 95%;
+    text-align: center;
+    background-color: var(--cor-imag-fundo8);
+    padding: 10px;
+}
+
+.container__contatos-botoes{
+    display: flex;
+    margin: 15px 0 15px 0;
+}
+
+.container__contatos-botoes input[type="button"]{
+    border: none;
+    width: 5vw;
+    border-radius: 0 15px 15px 0;
+}
+
+.container__contatos-botoes input[type="email"]{
+    text-align: center;
+    margin-left: 10px;
+    width: 15vw;
+    height: 30px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+}
+
+.container__contatos-botoes input[type="email"]::placeholder{
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+}
+
+.lista__contatos{
+    overflow-y: auto;
+    width: 100%;
+}
+
+.linha__contatos{
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+    width: 20vw;
+    height: 25px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.contato{
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+/*container conversa*/
+.container__conversa {
+    opacity: 0.9;
+    flex: 3;
+    background-color: lightgray;
+}
+
+.container__conversa-Titulo{
+    color: var(--cor-grau1);
+    font-size: 1.3rem;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--cor-imag-fundo8);
+    padding: 10px;
+}
+
+
+/*Conversa Chat*/
+
+.conversa__chat{
+    display: flex;
+    justify-content: start;
+    padding: 0 10px;
+}
+
+.conversa__chat textarea{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.2rem;
+    resize: none;
+    flex: 6;
+    height: 40px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+}
+
+.conversa__chat input[type="button"]{
+    font-size: 1.2rem;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    color: var(--cor-grau1);
+    flex: 1;
+    border: none;
+    background-color: var(--cor-imag-fundo8);
+    border-radius: 0 8px 8px 0;
+}
+
+
+/*Conversas*/
+.conversa__mensagens {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    margin: 10px;
+    border: solid var(--cor-grau4) 2px;
+    height: 72vh;
+}
+
+.userAgent,
+.userClient {
+    font-size: 1.2rem;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    width: max-content;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.userAgent {
+    text-align: start;
+    margin-left: auto;
+    max-width: 600px;
+    height: auto;
+    background-color: var(--cor-imag-fundo5);
+    color: var(--cor-grau1);
+}
+
+.userClient {
+    margin-left: 1%;
+    background-color: var(--cor-imag-fundo2);
+    color: var(--cor-grau1);
+}
+
+.userAgent .mensagem, .userClient .mensagem {
+    padding: 10px;
+}

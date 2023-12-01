@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="../utilsFront/reset.css">
+    <title>Willchat</title>
+</head>
+
+<body>
+    <header class="cabecario">
+        <div class="cabecario__logo">
+            <h1 class="cabecario__titulo">WillChat</h1>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <aside class="container__contatos">
+            <h2 class="container__titulo">Contatos</h2>
+            <div class="container__contatos-botoes">
+                <input class="contatos__add" type="email" name="addContatos" id="addContatos" placeholder="Adicionar contato">
+                <input class="contatos__add-btn" type="button" value="Adicionar">
+            </div>
+            <ul class="lista__contatos"></ul>
+        </aside>
+
+        <section class="container__conversa">
+            <h1 class="container__conversa-Titulo">Nome contato</h1>
+            <div class="conversa__mensagens"></div>
+
+            <div class="conversa__chat">
+                <textarea class="conversa__chat-textArea" name="conversa" id="chat" cols="30" rows="1"></textarea>
+                <input class="conversa__chat-btnEnviar" type="button" value="Enviar">
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./principal.js"></script>
+</body>
+
+</html>

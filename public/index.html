@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./utilsFront/reset.css">
+    <title>WillChat</title>
+</head>
+
+<body>
+
+    <header class="cabecario">
+        <div class="cabecario__logo">Willchat</div>
+    </header>
+
+    <main class="conteudo">
+
+        <div class="container login">
+            <h1 class="container__titulo">Tela de  Login</h1>
+            <form class="container__formulario-login">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="password" name="password" id="password" placeholder="Senha">
+                <input type="button" value="Entrar" class="container__submit">
+            </form>
+            <p class="container__login-cadastro-texto">Não possui conta ? <a class="container__login-btn-cadastrar" href="#">Clique aqui!</a></p>
+        </div>
+
+        <div class="container cadastro">
+            <h1 class="container__titulo">Cadastro</h1>
+            <form class="container__formulario-cadastro">
+                <input type="email" name="email" id="email-cadastro" placeholder="Email">
+                <input type="password" name="password" id="password-cadastro" placeholder="Senha">
+                <div class="container__botoes">
+                    <input type="button" value="Cadastrar" class="container__cadastro">
+                <input type="button" value="Voltar" class="container__cadastro btnVoltar">
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./login.js"></script>
+</body>
+
+</html>
