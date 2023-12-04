@@ -5,7 +5,7 @@ import autenticarUsuario from '../server/middleware/authToken.js';
 
 const nspPrincipal = io.of('principal');
 
-//io.of('/principal').use(autenticarUsuario);
+io.of('/principal').use(autenticarUsuario);
 
 nspPrincipal.on('connection', (socket)=>{
     

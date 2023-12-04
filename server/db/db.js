@@ -5,7 +5,7 @@ async function connect() {
         global.connection.state !== 'disconnected')
         return global.connection;
 
-    const connectionString = 'http://root:2william.@localhost:3306/willchat';
+    const connectionString = 'http://root:2Azelelao.@localhost:3306/willchat';
     const connection = await mysql.createConnection(connectionString);
     global.connection = connection;
     console.log('DB willchat Conectaddo !!')
@@ -32,8 +32,10 @@ async function inserirUser(user) {
 async function enviarMensagem(emailAgent, emailClient, mensagem) {
     const connection = await connect();
     const data = new Date();
-    const dataString = `${data.getFullYear()}-${data.getMonth()}-${data.getDay()} ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`;
-    const sql = `insert into mensagens (emailAgent, emailClient, dataEnvio, mensagem) values ("${emailAgent}", "${emailClient}", "${dataString}", "${mensagem}")`;
+    const opcoesData = { day: 'numeric', month: '2-digit', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'};
+    const dataformat = data.toLocaleDateString('pt-BR', opcoesData);
+    console.log(dataformat);
+    const sql = `insert into mensagens (emailAgent, emailClient, dataEnvio, mensagem) values ("${emailAgent}", "${emailClient}", "${dataformat}", "${mensagem}")`;
 
     return await connection.query(sql);
 };

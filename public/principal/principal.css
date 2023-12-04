@@ -184,7 +184,6 @@ body{
 /*Conversas*/
 .conversa__mensagens {
     display: flex;
-    flex-wrap: wrap;
     overflow-x: hidden;
     overflow-y: auto;
     flex-direction: column;

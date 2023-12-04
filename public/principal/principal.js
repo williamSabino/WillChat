@@ -13,11 +13,13 @@ btnEnviar.addEventListener('click', (event) => {
 });
 
 function AtualizarContainerChat(mensagem) {
+    console.log("não ordenado", mensagem);
+    limparTextArea();
     const mensagensOrdenadas = mensagem.sort((a, b) => {
         if (a.dataEnvio > b.dataEnvio) return 1;
         if (a.dataEnvio < b.dataEnvio) return -1
     });
-    limparTextArea();
+    console.log(mensagensOrdenadas);
     for (let item of mensagensOrdenadas) {
         if (item.emailAgent == localStorage.getItem('email')) {
             containerMensagens.innerHTML += `
