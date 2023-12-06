@@ -38,6 +38,10 @@ function eventoLogin(socket, io) {
             socket.emit('UserInvalido');
         }
     });
+
+    socket.on('recuperarSenha', (email)=>{
+        // há fazer !!
+    });
 }
 
 export default eventoLogin;

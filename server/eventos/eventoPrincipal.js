@@ -37,6 +37,7 @@ function eventoPrincipal(socket, io) {
         let salaVolta = userAgent + contato;
         io.to(salaIda).to(salaVolta).emit("enviarMensagemAtualizar", mensagens);
     });
+
 }
 
 export default eventoPrincipal;

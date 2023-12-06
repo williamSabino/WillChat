@@ -1,4 +1,4 @@
-import {gerarCookies} from "./utilsFront/cookies.js";
+import { gerarCookies } from "./utilsFront/cookies.js";
 
 const socket = io();
 
@@ -6,31 +6,38 @@ function validarUser(user) {
     socket.emit('validarUser', user);
 };
 
-function inserirUser(user){
+function inserirUser(user) {
     socket.emit('inserirUser', user);
 }
 
+function recuperarSenha(email) {
+    socket.emit('recuperarSenha', email);
+}
 
-socket.on('userCadastrado', ()=>{
+socket.on('userCadastrado', () => {
     alert('UserCadastrado');
 });
 
-socket.on('userExistente', ()=>{
+socket.on('userExistente', () => {
     alert('User Existente');
 });
 
-socket.on('UserInvalido', ()=>{
+socket.on('UserInvalido', () => {
     alert('Usuario Invalido!');
 });
 
-socket.on('userValidado', (jwt, email)=>{
+socket.on('userValidado', (jwt, email) => {
     gerarCookies('tokenJWT', jwt);
     localStorage.setItem('email', email);
     window.location.href = '/principal';
 });
 
-socket.on('userNaoValidado', ()=>{
+socket.on('userNaoValidado', () => {
     alert('Usuario Não autenticado!');
 });
 
-export {validarUser, inserirUser};
+export {
+    validarUser,
+    inserirUser,
+    recuperarSenha,
+};

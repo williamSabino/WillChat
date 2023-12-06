@@ -1,4 +1,4 @@
-import { validarUser, inserirUser } from "./socket-front-index.js";
+import { validarUser, inserirUser, recuperarSenha } from "./socket-front-index.js";
 
 //Formularios
 const formularioLogin = document.querySelector('.container__formulario-login');
@@ -18,7 +18,8 @@ const btnVoltarEsqueciSenha = document.querySelector('.btnVoltar-esqueci-senha')
 const btnEnviar = document.querySelector('input[value="Enviar"]');
 
 btnEnviar.addEventListener('click', () => {
-    //por fazer
+    const email = document.querySelector('#email-recuperacao').value;
+    recuperarSenha(email);
 });
 
 btnDirecionarCadastrar.addEventListener('click', () => {
