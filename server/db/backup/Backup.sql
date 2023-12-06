@@ -51,10 +51,10 @@ CREATE TABLE `mensagens` (
   `id` int NOT NULL AUTO_INCREMENT,
   `emailAgent` varchar(100) NOT NULL,
   `emailClient` varchar(100) NOT NULL,
-  `dataEnvio` datetime DEFAULT NULL,
+  `dataEnvio` varchar(100) DEFAULT NULL,
   `mensagem` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=249 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `mensagens` (
 
 LOCK TABLES `mensagens` WRITE;
 /*!40000 ALTER TABLE `mensagens` DISABLE KEYS */;
-INSERT INTO `mensagens` VALUES (241,'williamsabino64@gmail.com','andresalima45@outlook.com','2023-11-05 10:22:35','oiiii'),(242,'andresalima45@outlook.com','williamsabino64@gmail.com','2023-11-05 10:22:42','iiiooo'),(243,'williamsabino64@gmail.com','andresalima45@outlook.com','2023-11-05 10:23:00','iiiioioioioi'),(244,'andresalima45@outlook.com','wyllyam1258@gmail.com','2023-11-05 10:23:17','bbbbb');
+INSERT INTO `mensagens` VALUES (241,'williamsabino64@gmail.com','andresalima45@outlook.com','2023-11-05 10:22:35','oiiii'),(242,'andresalima45@outlook.com','williamsabino64@gmail.com','2023-11-05 10:22:42','iiiooo'),(243,'williamsabino64@gmail.com','andresalima45@outlook.com','2023-11-05 10:23:00','iiiioioioioi'),(244,'andresalima45@outlook.com','wyllyam1258@gmail.com','2023-11-05 10:23:17','bbbbb'),(245,'wyllyam1258@gmail.com','williamsabino64@gmail.com','6/12/2023, 08:37:19','ola mundo'),(246,'williamsabino64@gmail.com','wyllyam1258@gmail.com','6/12/2023, 08:37:34','ola'),(247,'williamsabino64@gmail.com','wyllyam1258@gmail.com','6/12/2023, 08:37:48','tudo bem ??'),(248,'wyllyam1258@gmail.com','williamsabino64@gmail.com','6/12/2023, 08:38:04','sim e você ?');
 /*!40000 ALTER TABLE `mensagens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-01 13:00:23
+-- Dump completed on 2023-12-06  8:51:49

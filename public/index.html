@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./utilsFront/reset.css">
+    <link rel="stylesheet" href="./index.css">
     <title>WillChat</title>
 </head>
 
@@ -18,13 +18,17 @@
     <main class="conteudo">
 
         <div class="container login">
-            <h1 class="container__titulo">Tela de  Login</h1>
+            <h1 class="container__titulo">Tela de Login</h1>
             <form class="container__formulario-login">
                 <input type="email" name="email" id="email" placeholder="E-mail">
                 <input type="password" name="password" id="password" placeholder="Senha">
-                <input type="button" value="Entrar" class="container__submit">
+                <div class="container__botoes">
+                    <input type="button" value="Entrar" class="container__submit">
+                    <input class="input-cadastro container__login-btn-cadastrar" type="button" value="Cadastrar">
+                </div>
             </form>
-            <p class="container__login-cadastro-texto">Não possui conta ? <a class="container__login-btn-cadastrar" href="#">Clique aqui!</a></p>
+            <p class="container__login-cadastro-texto">Esqueceu a senha ? <a class="container__login-btn-esqueci-Senha"
+                    href="#">Clique aqui!</a></p>
         </div>
 
         <div class="container cadastro">
@@ -34,7 +38,18 @@
                 <input type="password" name="password" id="password-cadastro" placeholder="Senha">
                 <div class="container__botoes">
                     <input type="button" value="Cadastrar" class="container__cadastro">
-                <input type="button" value="Voltar" class="container__cadastro btnVoltar">
+                    <input type="button" value="Voltar" class="container__cadastro btnVoltar">
+                </div>
+            </form>
+        </div>
+
+        <div class="container esqueci-senha">
+            <h1 class="container__titulo">Recuperação de Senha</h1>
+            <form class="container__formulario-esqueci-senha">
+                <input type="email" name="email" id="email-cadastro" placeholder="Email">
+                <div class="container__botoes">
+                    <input type="button" value="Enviar" class="container__cadastro">
+                    <input type="button" value="Voltar" class="container__cadastro btnVoltar-esqueci-senha">
                 </div>
             </form>
         </div>

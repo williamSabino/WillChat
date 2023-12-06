@@ -7,19 +7,19 @@ const textArea = document.querySelector('.conversa__chat-textArea');
 const containerMensagens = document.querySelector('.conversa__mensagens');
 const tituloChat = document.querySelector('.container__conversa-Titulo');
 
+// evento de click ao enviar mensagem
 btnEnviar.addEventListener('click', (event) => {
     enviarMensagem(textArea.value, url.get('contato'), localStorage.getItem('email'));
     textArea.value = ''; 
 });
 
+//atualiza o container onde as mensagens são exibidas
 function AtualizarContainerChat(mensagem) {
-    console.log("não ordenado", mensagem);
     limparTextArea();
     const mensagensOrdenadas = mensagem.sort((a, b) => {
         if (a.dataEnvio > b.dataEnvio) return 1;
         if (a.dataEnvio < b.dataEnvio) return -1
     });
-    console.log(mensagensOrdenadas);
     for (let item of mensagensOrdenadas) {
         if (item.emailAgent == localStorage.getItem('email')) {
             containerMensagens.innerHTML += `
@@ -37,10 +37,11 @@ function AtualizarContainerChat(mensagem) {
     }
 };
 
+//ao selecionar o contato o titulo é alterado baseado no contato escolhido
 function AtualizarTituloChat(titulo) {
     tituloChat.textContent = `${titulo}`;
 }
-
+// limpa o container de mensagens
 function limparTextArea() {
     containerMensagens.innerHTML = "";
 }
@@ -52,6 +53,7 @@ const listaContatos = document.querySelector('.lista__contatos');
 
 atualizarContatos(localStorage.getItem('email'));
 
+//funcão que busca no db os contatos e atualiza
 function atualizarListaContatos(contato) {
     listaContatos.innerHTML += `
     <li class="linha__contatos">

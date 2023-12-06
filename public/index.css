@@ -65,7 +65,10 @@ body{
     height: 40vh;
     background-color: var(--cor-grau4);
     opacity: 0.9;
+}
 
+.container__botoes{
+    display: flex;
 }
 
 .container__titulo{
@@ -76,7 +79,10 @@ body{
 }
 
 /*Formulario login*/
+
+
 .container__formulario-login,
+.container__formulario-esqueci-senha,
 .container__formulario-cadastro{
     margin-top: 3rem;
     display: flex;
@@ -87,6 +93,7 @@ body{
 
 
 .container__formulario-login input,
+.container__formulario-esqueci-senha input,
 .container__formulario-cadastro input{
     border-radius: 15px;
     border: none !important;
@@ -98,6 +105,7 @@ body{
 }
 
 .container__formulario-login input[type="button"],
+.container__formulario-esqueci-senha input[type="button"],
 .container__formulario-cadastro input[type="button"]{
     cursor: pointer;
     width: 10vw;
@@ -105,9 +113,13 @@ body{
     background-color: var(--cor-grau3);
 }
 
-
+.container__formulario-login input[value="Cadastrar"]{
+    background-color: var(--cor-imag-fundo1);
+    color: var(--cor-grau1);
+}
 
 .container__formulario-login input::placeholder,
+.container__formulario-esqueci-senha input::placeholder,
 .container__formulario-cadastro input::placeholder{
     text-align: center;
     font-size: 1rem;
@@ -137,6 +149,19 @@ body{
 }
 
 .container__formulario-cadastro input[value="Voltar"]{
-    background-color: var(--cor-grau5);
+    background-color: var(--cor-imag-fundo1);
     color: var(--cor-grau1);
 }
+
+/*Esqueci senha*/
+
+.esqueci-senha{
+    display: none;
+    height: auto;
+}
+
+.container__formulario-esqueci-senha input[value="Voltar"]{
+    background-color: var(--cor-imag-fundo1);
+    color: var(--cor-grau1);
+}
+

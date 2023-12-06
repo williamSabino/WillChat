@@ -1,11 +1,12 @@
 import mysql from 'mysql2/promise';
 
+// cria conexão com banco de dados
 async function connect() {
     if (global.connection &&
         global.connection.state !== 'disconnected')
         return global.connection;
 
-    const connectionString = 'http://root:2Azelelao.@localhost:3306/willchat';
+    const connectionString = 'http://root:2william.@localhost:3306/willchat';
     const connection = await mysql.createConnection(connectionString);
     global.connection = connection;
     console.log('DB willchat Conectaddo !!')
@@ -13,6 +14,9 @@ async function connect() {
     return global.connection;
 }
 connect();
+
+
+//funcções Query
 
 /*User*/
 async function encontrarUser(email) {
@@ -34,7 +38,6 @@ async function enviarMensagem(emailAgent, emailClient, mensagem) {
     const data = new Date();
     const opcoesData = { day: 'numeric', month: '2-digit', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'};
     const dataformat = data.toLocaleDateString('pt-BR', opcoesData);
-    console.log(dataformat);
     const sql = `insert into mensagens (emailAgent, emailClient, dataEnvio, mensagem) values ("${emailAgent}", "${emailClient}", "${dataformat}", "${mensagem}")`;
 
     return await connection.query(sql);
